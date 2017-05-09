@@ -13,7 +13,8 @@ define('LANG_SITES', [
 //  'en' => 'https://www.vibrobox.com/',
   'ru' => 'https://www.vibrobox.ru/']);
 define('DEMO_URL', 'https://www.demo.vibrobox.com/demo');
-define('GOOGLE_ANALYTICS_ID', 'UA-79782596-1');
+// TODO: Use different google analytics IDs if other language sites are in different domains.
+define('GOOGLE_ANALYTICS_ID', 'UA-79782596-2');
 
 // Translation defines for meta keywords and description if they are not customized in $PAGES.
 define('DEFAULT_META_DESCRIPTION', 'metaDescriptionIndexPage');
