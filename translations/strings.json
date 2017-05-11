@@ -2,12 +2,12 @@
   "metaDescriptionIndexPage": {
     "comment":"Page description displayed by search engines in the results list. Visible part is around 260 chars.",
     "default":"Fully automatic vibration-based diagnostics, condition monitoring and mechanical breakdown prediction service aimed to save on industrial equipment’s maintenance costs.",
-    "ru":"Алгоритмы анализа вибрации VibroBox автоматически рекомендуют техобслуживание и сообщают, какой именно узел оборудования нуждается в ремонте."
+    "ru":"Алгоритмы анализа вибрации VibroBox автоматически рекомендуют техобслуживание и сообщают, какой именно узел оборудования нуждается в ремонте. Вибродиагностика теперь доступна каждому как онлайн-сервис."
   },
   "metaKeywordsIndexPage": {
     "comment":"These keywords are used by Yandex in some cases.",
-    "default":"Estimation, condition, monitoring, equipment, vibro, diagnostics, vibrodiagnostics, vibration, prediction",
-    "ru":"Оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика, техническое обслуживание"
+    "default":"VibroBox, Estimation, condition, monitoring, equipment, vibro, diagnostics, vibrodiagnostics, vibration, prediction",
+    "ru":"Вибробокс, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика, техническое обслуживание"
   },
 
   "Menu":{
@@ -21,7 +21,7 @@
   "titleIndexPage":{
     "comment": "Main site page title. Google displays first 70 chars in search results (Yandex - 60, FB - 135). VERY important.",
     "en":"VibroBox: Automatic vibration diagnostics and condition monitoring for industrial equipment.",
-    "ru":"VibroBox — вибрационная диагностика и мониторинг состояния оборудования. Полностью автоматические рекомендации по техническому обслуживанию механизмов на основе анализа вибрации и кинематической схемы."
+    "ru":"VibroBox — вибродиагностика и мониторинг состояния оборудования. Полностью автоматические рекомендации по техническому обслуживанию механизмов на основе анализа вибрации и кинематической схемы."
   },
   "404pageTitle":{
     "en":"VibroBox: Error 404 Page Not Found.",
