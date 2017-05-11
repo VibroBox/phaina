@@ -229,9 +229,16 @@ function ReplaceUglyIDs(&$html, $idsAndTexts) {
   if (empty($idsAndTexts))
     return 0;
 
+  // All generated IDs should be unique.
+  // But this code is not needed because tidy (which is launched later) fixes it in a much cleaner way.
+  // $duplicatesToFix = array_diff_key($idsAndTexts, array_unique($idsAndTexts));
+  // if (array_walk($duplicatesToFix, function(&$value, $key) { $value = $value . strstr($key, '.'); }))
+  //   $idsAndTexts = array_replace($idsAndTexts, $duplicatesToFix);
+
   foreach ($idsAndTexts as $id => $text)
     $idsAndTexts[$id] = MakePrettyLink($text);
   $html = str_replace(array_keys($idsAndTexts), array_values($idsAndTexts), $html, $count);
+
   return $count;
 }
 
