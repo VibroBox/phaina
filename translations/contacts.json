@@ -21,19 +21,23 @@
     "ru":"Главный офис"
   },
   "developmentOffice":{
-    "en":"Development Office",
+    "en":"Development office",
     "ru":"Центр разработки"
   },
   "ourContacts":{
-    "ru":"Наши контакты"
+    "en": "Our Contacts",
+    "ru": "Наши контакты"
   },
   "contactsIntro":{
+    "en":"Please don't hesitate to contact us directly at <a href='mailto:info@vibrobox.com'>info@vibrobox.com</a>.",
     "ru":"Мы с удовольствием ответим на любые ваши вопросы. Пишите нам на <a href='mailto:info@vibrobox.com'>info@vibrobox.com</a>."
   },
   "addressEstonia":{
+    "en":"Rävala pst 8, office 810<br/>Tallinn, 10143<br/>Estonia<br/><a href=tel:+3726027122>+372 602 7122</a>",
     "ru":"Бульвар Равала 8, офис 810<br/>Таллин, 10143<br/>Эстония<br/><a href=tel:+3726027122>+372 602 7122</a>"
   },
   "addressBelarus":{
+    "en":"22A/2 Lahoyski Tract, office 402<br/>Minsk, 220090<br/>Belarus<br/><a href=tel:+375291768335>+375 29 1768335</a>",
     "ru":"Логойский тракт 22A/2, офис 402<br/>г. Минск, 220090<br/>Беларусь<br/><a href=tel:+375291768335>+375 29 1768335</a>"
   },
   "sitel":{
