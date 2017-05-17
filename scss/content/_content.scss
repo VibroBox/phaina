@@ -1,3 +1,10 @@
+// In Russian, readers are used to the "Redline" indent.
+html[lang="ru"] .content p {
+  @include notPhablet {
+    text-indent: 2rem;
+  }
+}
+
 .content {
   margin-left: 0.3rem;
   margin-right: 0.3rem;
@@ -25,9 +32,7 @@
 
   p {
     margin-bottom: 0.5rem;
-    text-indent: 2rem;
     @include phablet {
-      text-indent: 0;
       text-align: left;
     }
   }
