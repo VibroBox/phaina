@@ -26,13 +26,13 @@ $smartphoneWidth:       425px;
   }
 }
 
-@mixin notPhablet {
+@mixin largerThanPhablet {
   @media (min-width: #{$phabletWidth + 1}) {
     @content;
   }
 }
 
-@mixin notMediumDevices {
+@mixin largerThanMediumDevices {
   @media (min-width: #{$mediumDevicesWidth + 1}) {
     @content;
   }

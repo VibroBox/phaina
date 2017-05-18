@@ -46,9 +46,8 @@ HTML_HEAD();
   </section>
   <!-- Map is rendered here by leaflet and our js code below. -->
   <section id="leaflet-map" class="leaflet-map"></section>
-  <a class="feedback" href="mailto:info@vibrobox.com?subject=<?= T("feedback") ?>"><?= T("feedback") ?></a>
 </main>
-
+<?php HTML_ASIDE(); ?>
 <?php HTML_FOOTER(); ?>
 
 <!-- Code which renders leaflet map with #leaflet-map id above. It's here for localization. -->
