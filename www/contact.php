@@ -47,7 +47,7 @@ HTML_HEAD();
   <!-- Map is rendered here by leaflet and our js code below. -->
   <section id="leaflet-map" class="leaflet-map"></section>
 </main>
-
+<?php HTML_ASIDE(); ?>
 <?php HTML_FOOTER(); ?>
 
 <!-- Code which renders leaflet map with #leaflet-map id above. It's here for localization. -->

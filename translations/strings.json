@@ -1,54 +1,52 @@
 {
   "metaDescriptionIndexPage": {
-    "comment":"Page description displayed by search engines in the results list. Visible part is around 260 chars.",
-    "default":"Fully automatic vibration-based diagnostics, condition monitoring and mechanical breakdown prediction service aimed to save on industrial equipment’s maintenance costs.",
-    "ru":"Алгоритмы анализа вибрации VibroBox автоматически рекомендуют техобслуживание и сообщают, какой именно узел оборудования нуждается в ремонте. Вибродиагностика теперь доступна каждому как онлайн-сервис."
+    "comment": "Page description displayed by search engines in the results list. Visible part is around 260 chars.",
+    "default": "Fully automatic vibration-based diagnostics, condition monitoring and mechanical breakdown prediction service aimed to save on industrial equipment’s maintenance costs.",
+    "ru": "Алгоритмы анализа вибрации VibroBox автоматически рекомендуют техобслуживание и сообщают, какой именно узел оборудования нуждается в ремонте. Вибродиагностика теперь доступна каждому как онлайн-сервис."
   },
   "metaKeywordsIndexPage": {
-    "comment":"These keywords are used by Yandex in some cases.",
-    "default":"VibroBox, Estimation, condition, monitoring, equipment, vibro, diagnostics, vibrodiagnostics, vibration, prediction",
-    "ru":"Вибробокс, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика, техническое обслуживание"
+    "comment": "These keywords are used by Yandex in some cases.",
+    "default": "VibroBox, Estimation, condition, monitoring, equipment, vibro, diagnostics, vibrodiagnostics, vibration, prediction",
+    "ru": "Вибробокс, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика, техническое обслуживание"
   },
-
-  "Menu":{
-    "en":"Menu",
-    "ru":"Меню"
+  "Menu": {
+    "en": "Menu",
+    "ru": "Меню"
   },
   "menuIndexPage": {
     "en": "Home",
     "ru": "Главная"
   },
-  "titleIndexPage":{
+  "titleIndexPage": {
     "comment": "Main site page title. Google displays first 70 chars in search results (Yandex - 60, FB - 135). VERY important.",
-    "en":"VibroBox: Automatic vibration diagnostics and condition monitoring for industrial equipment.",
-    "ru":"VibroBox — вибродиагностика и мониторинг состояния оборудования. Полностью автоматические рекомендации по техническому обслуживанию механизмов на основе анализа вибрации и кинематической схемы."
+    "en": "VibroBox: Automatic vibration diagnostics and condition monitoring for industrial equipment.",
+    "ru": "VibroBox — вибродиагностика и мониторинг состояния оборудования. Полностью автоматические рекомендации по техническому обслуживанию механизмов на основе анализа вибрации и кинематической схемы."
   },
-  "404pageTitle":{
-    "en":"VibroBox: Error 404 Page Not Found.",
-    "ru":"VibroBox: Ошибка 404 Страница не найдена."
+  "404pageTitle": {
+    "en": "VibroBox: Error 404 Page Not Found.",
+    "ru": "VibroBox: Ошибка 404 Страница не найдена."
   },
-  "404pageH1":{
-    "en":"Error 404:",
-    "ru":"Ошибка 404:"
+  "404pageH1": {
+    "en": "Error 404:",
+    "ru": "Ошибка 404:"
   },
-  "404pageText":{
-    "en":"The page you are looking for is not here.",
-    "ru":"Страница, которую вы ищете, не найдена."
+  "404pageText": {
+    "en": "The page you are looking for is not here.",
+    "ru": "Страница, которую вы ищете, не найдена."
   },
-  "moreAboutTechnology":{
-    "en":"Technology Details",
-    "ru":"Подробнее о технологии"
+  "moreAboutTechnology": {
+    "en": "Technology Details",
+    "ru": "Подробнее о технологии"
   },
-  "loginButton":{
-    "en":"View Demo",
-    "ru":"Личный кабинет"
+  "loginButton": {
+    "en": "View Demo",
+    "ru": "Личный кабинет"
   },
-  "viewDemo":{
-    "en":"View Demo",
-    "ru":"Демонстрация"
+  "viewDemo": {
+    "en": "View Demo",
+    "ru": "Демонстрация"
   },
-
-  "indexMainTitle":{
+  "indexMainTitle": {
     "en": "Vibration diagnostics service for Industry 4.0 and IIoT",
     "ru": "Онлайн вибродиагностика для Индустрии 4.0 и промышленного интернета вещей"
   },
@@ -56,7 +54,6 @@
     "en": "Unmanned diagnostics service, technical condition assessment and detailed recommendations for machinery maintenance. VibroBox algorithms extract useful information from vibration and acoustic signals to help you avoid breakage and increase the service life of the equipment.",
     "ru": "Полностью автоматический сервис диагностики, оценки технического состояния и детальных рекомендаций по обслуживанию производственного и технологического оборудования. Никакой магии: алгоритмы VibroBox извлекают всю нужную информацию из вибрации и кинематической схемы (при её наличии)."
   },
-
   "plusTitle": {
     "en": "The age of automatic high-tech condition monitoring and diagnostics has arrived",
     "ru": "Теперь автоматическая высокотехнологичная вибродиагностика доступна как онлайн-сервис!"
@@ -77,19 +74,19 @@
     "en": "Use your own vibration measuring equipment or get our specialized VibroBox smart sensors.",
     "ru": "Используйте имеющееся на предприятии виброизмерительное оборудование или получите вместе с сервисом наше."
   },
-  "plusAvailabilityTitle" :{
+  "plusAvailabilityTitle": {
     "en": "Convenient and accessible",
     "ru": "Удобно и доступно"
   },
-  "plusAvailabilityDescription" :{
+  "plusAvailabilityDescription": {
     "en": "Diagnostic reports on your equipment condition are always at your fingertips accessible from anywhere by the Web, Smartphone, SMS, and E-mail.",
     "ru": "Результаты оценки технического состояния вашего оборудования всегда доступны онлайн, а также посредством SMS или E-mail, где бы вы ни находились."
   },
-  "plusSimplicityTitle" :{
+  "plusSimplicityTitle": {
     "en": "Easy integration",
     "ru": "Простота интеграции"
   },
-  "plusSimplicityDescription" :{
+  "plusSimplicityDescription": {
     "en": "VibroBox service is easily integrated with enterprise ERP, MES, CMMS, and SCADA.",
     "ru": "VibroBox легко интегрируется с системами управления предприятием, производственными процессами и техническим обслуживанием (ERP, MES, CMMS, SCADA)."
   },
@@ -148,5 +145,9 @@
   "language": {
     "en": "English",
     "ru": "Русский"
+  },
+  "feedback": {
+    "en": "Feedback",
+    "ru": "Обратная связь"
   }
 }

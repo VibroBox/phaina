@@ -121,9 +121,8 @@ $solutionSectionItems = [[
       <?= T('bottomIndexTechButton') ?>
     </a>
   </section>
-
 </main>
-
+<?php HTML_ASIDE(); ?>
 <?php HTML_FOOTER(); ?>
 
 </body>

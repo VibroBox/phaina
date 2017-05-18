@@ -27,7 +27,7 @@ HTML_HEAD();
     </div>
   </section>
 </main>
-
+<?php HTML_ASIDE(); ?>
 <?php HTML_FOOTER(); ?>
 
 </body>
