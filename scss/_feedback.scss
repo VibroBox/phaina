@@ -25,7 +25,7 @@
     color: $whiteColor;
   }
 
-  // make visible on divises with width > 992px
+  // make visible on diviсes with width > 992px
   @include notMediumDevices {
     display: block;
   }
