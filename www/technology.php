@@ -23,6 +23,7 @@ HTML_HEAD();
       <?php IncludeContent('technology') ?>
     </div>
   </section>
+  <a class="feedback" href="mailto:info@vibrobox.com?subject=<?= T("feedback") ?>"><?= T("feedback") ?></a>
 </main>
 
 <?php HTML_FOOTER(); ?>
