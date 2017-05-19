@@ -93,3 +93,9 @@ a {
       font-size: $baseFontSize + 2;
   }
 }
+
+@media print {
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}

@@ -2,7 +2,7 @@
   <a href="<?= BaseURL() ?>" class="logo"></a>
 
   <?php if (count(GetPageTranslationsExcludingCurrentLang()) > 0) : ?>
-  <ul class="languages">
+  <ul class="languages no-print">
     <?php foreach (GetPageTranslationsExcludingCurrentLang() as $key => $t) : ?>
     <li>
       <a hreflang="<?= $key ?>" href="<?= $t['url'] ?>" rel="alternate">
@@ -15,9 +15,9 @@
 
   <!-- Hidden checkbox is used for pure CSS toggle menu. -->
   <input type="checkbox" id="menu__trigger" class="menu__trigger" />
-  <label for="menu__trigger"><?= T('Menu') ?></label>
+  <label class="no-print" for="menu__trigger"><?= T('Menu') ?></label>
 
-  <ul class="menu">
+  <ul class="menu no-print">
     <?php foreach (MainMenu() as $m) : ?>
     <li class="menu__item">
       <a class="menu__link<?php if ($m->isCurrent) echo ' menu__link--selected'?>" href="<?= $m->url ?>"><?= $m->title ?></a>
