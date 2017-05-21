@@ -1,3 +1,3 @@
 <aside>
-  <a class="feedback" href="mailto:info@vibrobox.com?subject=<?= T("feedback") ?>"><?= T("feedback") ?></a>
+  <a class="feedback" href="mailto:info@vibrobox.com?subject=<?= T('feedback').' / '.PageTitle() ?>"><?= T('feedback') ?></a>
 </aside>
