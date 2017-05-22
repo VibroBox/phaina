@@ -12,7 +12,7 @@ define('LANG', 'ru');
 define('LANG_SITES', [
 //  'en' => 'https://www.vibrobox.com/',
   'ru' => 'https://www.vibrobox.ru/']);
-define('DEMO_URL', 'https://www.demo.vibrobox.com/demo?locale=' . LANG);
+define('DEMO_URL', 'https://demo.vibrobox.com/demo?locale=' . LANG);
 // TODO: Use different google analytics IDs if other language sites are in different domains.
 define('GOOGLE_ANALYTICS_ID', ['en' => 'UA-79782596-1', 'ru' => 'UA-79782596-2']);
 
