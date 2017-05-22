@@ -96,7 +96,7 @@ $team = [[
     <p class="preface"><?= T('teamPreface') ?></p>
     <div class="team-container">
       <?php foreach ($team as $m) : ?>
-      <div class="team-member">
+      <div id="<?= MakePrettyLink($m['name']) ?>" class="team-member">
         <img class="team-member__img" src="<?= URL($m['img']) ?>" alt="<?= T($m['name']) ?>" />
         <div class="team-member__description">
           <h3 class="team-member__name"><?= T($m['name']) ?></h3>
