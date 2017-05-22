@@ -10,79 +10,79 @@ HTML_HEAD();
 
 $team = [[
     'img' => 'img/team/Igor_Davydov.jpg',
-    'name' => T('Igor Davydov'),
-    'title' => T('idavydovTitle'),
-    'description' => T('idavydovDescription')],
+    'name' => 'Igor Davydov',
+    'title' => 'idavydovTitle',
+    'description' => 'idavydovDescription'],
   [
     'img' => 'img/team/Alexander_Zolotarev.jpg',
-    'name' => T('Alexander Zolotarev'),
-    'title' => T('zolotarevTitle'),
-    'description' => T('zolotarevDescription')],
+    'name' => 'Alexander Zolotarev',
+    'title' => 'zolotarevTitle',
+    'description' => 'zolotarevDescription'],
   [
     'img' => 'img/team/Yury_Aslamov.jpg',
-    'name' => T('Yury Aslamov'),
-    'title' => T('yaslamovTitle'),
-    'description' => T('yaslamovDescription')],
+    'name' => 'Yury Aslamov',
+    'title' => 'yaslamovTitle',
+    'description' => 'yaslamovDescription'],
   [
     'img' => 'img/team/Sergei_Vasukevich.jpg',
-    'name' => T('Sergey Vasukevich'),
-    'title' => T('vasukevichTitle'),
-    'description' => T('vasukevichDescription')],
+    'name' => 'Sergey Vasukevich',
+    'title' => 'vasukevichTitle',
+    'description' => 'vasukevichDescription'],
   [
     'img' => 'img/team/Aliaksei_Maniuk.jpg',
-    'name' => T('Aliaksei Maniuk'),
-    'title' => T('maniukTitle'),
-    'description' => T('maniukDescription')],
+    'name' => 'Aliaksei Maniuk',
+    'title' => 'maniukTitle',
+    'description' => 'maniukDescription'],
   [
     'img' => 'img/team/Aleksandr_Tsurko.jpg',
-    'name' => T('Aleksandr Tsurko'),
-    'title' => T('tsurkoTitle'),
-    'description' => T('tsurkoDescription')],
+    'name' => 'Aleksandr Tsurko',
+    'title' => 'tsurkoTitle',
+    'description' => 'tsurkoDescription'],
   [
     'img' => 'img/team/Andrey_Aslamov.jpg',
-    'name' => T('Andrey Aslamov'),
-    'title' => T('aslamovTitle'),
-    'description' => T('aslamovDescription')],
+    'name' => 'Andrey Aslamov',
+    'title' => 'aslamovTitle',
+    'description' => 'aslamovDescription'],
   [
     'img' => 'img/team/Anatoliy_Shevchenko.jpg',
-    'name' => T('Anatoliy Shevchenko'),
-    'title' => T('shevchenkoTitle'),
-    'description' => T('shevchenkoDescription')],
+    'name' => 'Anatoliy Shevchenko',
+    'title' => 'shevchenkoTitle',
+    'description' => 'shevchenkoDescription'],
   [
     'img' => 'img/team/Mikita_Kasmach.jpg',
-    'name' => T('Mikita Kasmach'),
-    'title' => T('kasmachTitle'),
-    'description' => T('kasmachDescription')],
+    'name' => 'Mikita Kasmach',
+    'title' => 'kasmachTitle',
+    'description' => 'kasmachDescription'],
   [
     'img' => 'img/team/Petr_Riabtsev.jpg',
-    'name' => T('Petr Riabtsev'),
-    'title' => T('riabtsevTitle'),
-    'description' => T('riabtsevDescription')],
+    'name' => 'Petr Riabtsev',
+    'title' => 'riabtsevTitle',
+    'description' => 'riabtsevDescription'],
   [
     'img' => 'img/team/Oleg_Avsyankin.jpg',
-    'name' => T('Oleg Avsyankin'),
-    'title' => T('avsyankinTitle'),
-    'description' => T('avsyankinDescription')],
+    'name' => 'Oleg Avsyankin',
+    'title' => 'avsyankinTitle',
+    'description' => 'avsyankinDescription'],
   [
     'img' => 'img/team/Roman_Tolkach.jpg',
-    'name' => T('Roman Tolkach'),
-    'title' => T('tolkachTitle'),
-    'description' => T('tolkachDescription')],
+    'name' => 'Roman Tolkach',
+    'title' => 'tolkachTitle',
+    'description' => 'tolkachDescription'],
   [
     'img' => 'img/team/Mihail_Bogdanec.jpg',
-    'name' => T('Mihail Bogdanec'),
-    'title' => T('bogdanecTitle'),
-    'description' => T('bogdanecDescription')],
+    'name' => 'Mihail Bogdanec',
+    'title' => 'bogdanecTitle',
+    'description' => 'bogdanecDescription'],
   [
     'img' => 'img/team/Yaraslava_Herasimuk.jpg',
-    'name' => T('Yaraslava Herasimuk'),
-    'title' => T('herasimukTitle'),
-    'description' => T('herasimukDescription')],
+    'name' => 'Yaraslava Herasimuk',
+    'title' => 'herasimukTitle',
+    'description' => 'herasimukDescription'],
   [
     'img' => 'img/team/Artem_Bourak.jpg',
-    'name' => T('Artem Bourak'),
-    'title' => T('bourakTitle'),
-    'description' => T('bourakDescription')]
+    'name' => 'Artem Bourak',
+    'title' => 'bourakTitle',
+    'description' => 'bourakDescription']
 ];
 ?>
 
@@ -97,11 +97,11 @@ $team = [[
     <div class="team-container">
       <?php foreach ($team as $m) : ?>
       <div class="team-member">
-        <img class="team-member__img" src="<?= URL($m['img']) ?>" alt="<?= $m['name'] ?>" />
+        <img class="team-member__img" src="<?= URL($m['img']) ?>" alt="<?= T($m['name']) ?>" />
         <div class="team-member__description">
-          <h3 class="team-member__name"><?= $m['name'] ?></h3>
-          <h4 class="team-member__title"><?= $m['title'] ?></h4>
-          <div><?= $m['description'] ?></div>
+          <h3 class="team-member__name"><?= T($m['name']) ?></h3>
+          <h4 class="team-member__title"><?= T($m['title']) ?></h4>
+          <div><?= T($m['description']) ?></div>
         </div>
       </div>
       <?php endforeach; ?>
