@@ -15,16 +15,12 @@
 
   <link rel="icon" type="image/x-icon" href="<?= URL('favicon.ico') ?>?">
   <link rel="stylesheet" type="text/css" href="<?= URL('css/style.css') ?>">
-  <!-- TODO: Generate hreflang links for every language. -->
-  <?php /* $langSites = [
-      'https://www.vibrobox.com/' => ['x-default', 'en'],
-      'https://www.vibrobox.ru/' => ['ru', 'uk', 'kk'],
-      'https://www.vibrobox.by/' => ['be'],
-    ];
-  ?>
-  <?php foreach ($langSites as $url => $langs) : foreach ($langs as $lang) : ?>
-  <link href="<?= $url ?>" hreflang="<?= $lang ?>" rel="alternate">
-  <?php endforeach; endforeach; */?>
+
+  <?php if (count(LANG_SITES) > 1) : // The first site/language is used as a default one. ?>
+  <link href="<?= URLTo(PageLink(), LANG_SITES[array_keys(LANG_SITES)[0]]) ?>" hreflang="x-default" rel="alternate">
+  <?php foreach (LANG_SITES as $lang => $baseUrl) : ?>
+  <link href="<?= URLTo(PageLink(), $baseUrl) ?>" hreflang="<?= $lang ?>" rel="alternate">
+  <?php endforeach; endif; ?>
 
   <?php foreach (PageCSS() as $url) : ?>
   <link rel="stylesheet" type="text/css" href="<?= $url ?>">
