@@ -30,9 +30,8 @@ function PageLink() {
   if ($file == 'index.php')
     return '';  // Empty link means a root index page.
 
-  // Use file name without extension as a link.
-  // TODO: Filter out IRI-incompatible symbols out of the file name and beautify IRI.
-  return substr($file, 0, strrpos($file, '.'));
+  // Generate page link address from the current (php) file name without extension.
+  return MakePrettyLink(substr($file, 0, strrpos($file, '.')));
 }
 
 function PageTitle() {
