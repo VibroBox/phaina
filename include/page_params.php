@@ -21,11 +21,11 @@ function ExtractLinkFromPage($pageFile) {
   return $pageFile;
 }
 
-// TODO: Support localized links.
+// TODO: Support localized (translated) links.
 function PageLink() {
   if (defined('LINK'))
     return LINK;
-  // TODO: Create correct IRI from file name.
+  // TODO: Correctly support pages in subfolders.
   $file = PageFile();
   if ($file == 'index.php')
     return '';  // Empty link means a root index page.

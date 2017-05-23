@@ -30,7 +30,7 @@
   <link rel="stylesheet" type="text/css" href="<?= $url ?>">
   <?php endforeach; ?>
 
-  <!-- TODO: Move JS scripts to the footer. -->
+  <!-- TODO: Move external JS scripts to the footer. -->
   <?php foreach (PageJS() as $url) : ?>
   <script defer type="text/javascript" src="<?= $url ?>">
   <?php endforeach; ?>
