@@ -16,7 +16,9 @@ function BaseURL() {
     return "${scheme}://${_SERVER['HTTP_HOST']}/";
   }
 
-  // Get base url from list of available translations.
+  // Get base url from list of available translations and append trailing slash if necessary.
+  if (LANG_SITES[LANG][-1] != '/')
+    return LANG_SITES[LANG] . '/';
   return LANG_SITES[LANG];
 }
 
