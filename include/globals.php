@@ -22,22 +22,30 @@ function BaseURL() {
   return LANG_SITES[LANG];
 }
 
+// Builds correct full IRI from relative link or page.
+// If $link is a full IRI it's returned as-is.
 // $link can be any absolute link without leading slash or .php page name.
-function URL($link) {
+function URLTo($link, $baseUrl) {
   // Root/home/index page.
   if (empty($link) or $link == '/' or $link == 'index.php')
-    return BaseURL();
+    return $baseUrl;
   // Ignore full IRIs.
   if (!IsRelativeIRI($link))
     return $link;
   // Extract page link directly from the page's file.
   if (EndsWith($link, '.php'))
-    return JoinIRI(BaseURL(), ExtractLinkFromPage($link));
+    return JoinIRI($baseUrl, ExtractLinkFromPage($link));
   // Correctly replace relative links with absolute ones.
   if ($link[0] == '#')
-    return JoinIRI(BaseURL(), PageLink()) . $link;
+    return JoinIRI($baseUrl, PageLink()) . $link;
 
-  return JoinIRI(BaseURL(), $link);
+  return JoinIRI($baseUrl, $link);
+}
+
+// Returns correct full IRI for the currently active language/site.
+// See description for URLTo() function.
+function URL($link) {
+  return URLTo($link, BaseURL());
 }
 
 function HTML_HEAD() {
