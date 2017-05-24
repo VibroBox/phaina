@@ -5,11 +5,11 @@ REM Created by Alexander Zolotarev <me@alex.bio> from Minsk, Belarus.
 
 SETLOCAL
 
-REM Use first parameter as out directory
+REM Optional output directory can be passed as a first parameter.
 IF [%1] EQU [] (
-    SET out_dir=docs
+  SET out_dir=docs
 )ELSE (
-    SET out_dir=%1
+  SET out_dir=%1
 )
 
 REM Use PHP from the PATH.
