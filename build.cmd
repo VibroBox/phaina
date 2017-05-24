@@ -5,9 +5,16 @@ REM Created by Alexander Zolotarev <me@alex.bio> from Minsk, Belarus.
 
 SETLOCAL
 
+REM Use first parameter as out directory
+IF [%1] EQU [] (
+    SET out_dir=docs
+)ELSE (
+    SET out_dir=%1
+)
+
 REM Use PHP from the PATH.
 SET php=php.exe
-SET generate_command=%php% generate.php www docs
+SET generate_command=%php% generate.php www %out_dir%
 for %%f in (bin\sassc*%PROCESSOR_ARCHITECTURE%.exe) do SET sassc=%%f
 
 SET sassc_input=scss/style.scss
