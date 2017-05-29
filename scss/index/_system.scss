@@ -24,7 +24,7 @@
 
   &__title {
     color: $titleColor;
-    font-size: 18px;
+    font-size: 1.125 * $baseFontSize;
     font-weight: 600;
   }
 
@@ -123,7 +123,7 @@
 
     &__title {
       color: $titleColor;
-      font-size: 18px;
+      font-size: 1.125 * $baseFontSize;
       font-weight: 600;
     }
 
@@ -237,7 +237,7 @@
     }
 
     &__title {
-      font-size: 18px;
+      font-size: 1.125 * $baseFontSize;
       font-weight: 600;
     }
 
