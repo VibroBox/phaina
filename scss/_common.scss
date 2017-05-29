@@ -26,9 +26,10 @@ img { box-sizing: content-box; }
 
 body {
   color: $baseColor;
-  font-family: 'Trebuchet MS', 'Helvetica', 'Arial Unicode MS', 'Arial';
+  font-family: "San Francisco", -apple-system, system-ui, ".SFNSText-Regular", sans-serif;
+  letter-spacing: -0.02em;
   font-size: $baseFontSize;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 1.2;
   height: 100%;
   width: 100%;
