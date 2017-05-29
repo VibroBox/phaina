@@ -86,11 +86,11 @@ a {
 }
 
 .preface {
-  font-size: $baseFontSize + 8;
+  font-size: 1.5 * $baseFontSize;
   text-align: center;
 
   @include phablet {
-      font-size: $baseFontSize + 2;
+      font-size: 1.125 * $baseFontSize;
   }
 }
 
