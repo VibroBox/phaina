@@ -10,7 +10,7 @@ define('LANG', 'ru');
 // Please use BaseURL() function instead of direct access, it makes development easier.
 // Url for current active language will be treated as base url.
 define('LANG_SITES', [
-//  'en' => 'https://www.vibrobox.com/',
+  'en' => 'https://www.vibrobox.com/',
   'ru' => 'https://www.vibrobox.ru/']);
 define('DEMO_URL', 'https://demo.vibrobox.com/demo?locale=' . LANG);
 // TODO: Use different google analytics IDs if other language sites are in different domains.
