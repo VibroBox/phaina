@@ -22,7 +22,7 @@ SASSC_INPUT_SCSS="scss/style.scss"
 # sassc output
 SASSC_OUTPUT_CSS="www/css/style.css"
 # One of: nested, expanded, compact, compressed.
-OUTPUT_CSS_FORMAT="compressed"
+OUTPUT_CSS_FORMAT="nested"
 
 # Use php from the path
 PHP_BINARY="php"
