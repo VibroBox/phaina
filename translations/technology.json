@@ -15,5 +15,13 @@
   "metaKeywordsTechnologyPage":{
     "en":"Tech page keywords for bing.",
     "ru":"Ключевые слова для bing."
+  },
+  "updatedAt":{
+    "en":"Updated on %B %e, %Y at %H:%M %Z.",
+    "ru":"Обновлено %e %B %Y в %H:%M %Z."
+  },
+  "setlocale":{
+    "en":"en_US",
+    "ru":"ru_RU"
   }
 }
