@@ -13,10 +13,10 @@
 }
 
 .actionButton {
+  @extend %roundButton;
   margin: 1rem;
   font-size: $baseFontSize;
   font-weight: 500;
-  padding: 1rem 1.5rem;
   text-transform: uppercase;
   background-color: $linkColor;
   color: $whiteColor;

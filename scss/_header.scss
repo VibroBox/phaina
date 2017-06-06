@@ -85,6 +85,7 @@ $headerPadding: 10px;
     text-decoration: none;
 
     &--login {
+      @extend %roundButton;
       @include MenuItemButtonBorder;
 
       &:hover {
@@ -133,6 +134,7 @@ input.menu__trigger {
 
 // Mobile menu button (breadcrumb).
 label[for="menu__trigger"] {
+  @extend %roundButton;
   display: none;
   @include mediumDevices {
     display: block;
