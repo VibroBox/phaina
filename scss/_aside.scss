@@ -1,9 +1,9 @@
-.feedback {
-  display: none;
-
+aside {
   position: fixed;
-  padding: 0.2rem 0.5rem 0.1rem 0.5rem;
-  top: 60%;
+  top: 60vh;
+  @include mediumDevices {
+    top: 80vh;
+  }
   right: 0%;
   transform: rotate(-90deg);
   -moz-transform: rotate(270deg);
@@ -15,13 +15,17 @@
   -o-transform-origin: 100% 100%;
   -webkit-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
+  z-index: 999;
+}
 
+.feedback {
+  display: none;
+  padding: 0.2rem 0.5rem 0.1rem 0.5rem;
   font-weight: bold;
   font-family: Helvetica, Roboto, Arial, Sans-Serif;
   color: $whiteColor;
   background-color: #d1d1d1;
   border-radius: 5px 5px 0 0;
-  z-index: 999;
 
   &:hover {
     text-decoration: none;
@@ -30,6 +34,20 @@
 
   // Make it visible on deviсes with width > 992px.
   @include largerThanMediumDevices {
-    display: block;
+    display: inline;
+  }
+}
+
+.jumpToTOC {
+  padding: 0 0.5rem 0 0.5rem;
+  font-weight: bold;
+  font-family: Helvetica, Roboto, Arial, Sans-Serif;
+  color: $whiteColor;
+  background-color: #d1d1d1;
+  border-radius: 5px 5px 0 0;
+
+  &:hover {
+    color: $linkColor;
+    text-decoration: none;
   }
 }
