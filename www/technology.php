@@ -11,6 +11,28 @@ define('META', [
 ]);
 
 HTML_HEAD();
+
+// Returns human-readable string about this page's content update time.
+// TODO: Reuse this code.
+function UpdatedAt() {
+  $dateFormat = T('updatedAt');
+  // Windows does not support %e.
+  if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN')
+    $dateFormat = str_replace('%e', '%#d', $dateFormat);
+  $oldLocale = setlocale(LC_TIME, '0');
+  if (false === setlocale(LC_TIME, T('setlocale')))
+    die("ERROR: setlocale is not supported.\n");
+  $lastmod = filemtime(dirname(__FILE__).'/../content/technology.' . LANG . '.html');
+  $updatedAt = strftime($dateFormat, $lastmod);
+  setlocale(LC_TIME, $oldLocale);
+  // Remove leading space for %e if necessary.
+  return str_replace('  ', ' ', $updatedAt);
+}
+
+function W3C() {
+  $lastmod = filemtime(dirname(__FILE__).'/../content/technology.' . LANG . '.html');
+  return date(DATE_W3C, $lastmod);
+}
 ?>
 
 <body onload="scrollProgress.set({color: '#FF0000', height: '2px', bottom: false});">
@@ -20,6 +42,7 @@ HTML_HEAD();
 <main role="main">
   <section class="section technology">
     <h1><?= T('titleTechnologyPage') ?></h1>
+    <time class="publicationDate" datetime="<?= W3C() ?>" itemprop="datePublished"><?= UpdatedAt() ?></time>
     <div class="content content__technology">
       <?php IncludeContent('technology') ?>
     </div>
