@@ -82,8 +82,8 @@ $solutionSectionItems = [[
     <div class="section">
       <h1 class="title-index__main"><?= T('indexMainTitle') ?></h1>
       <p class="preface"><?= T('indexPreface') ?></p>
-      <a class="action-button" href="<?= URL('technology.php') ?>"><?= T('moreAboutTechnology') ?></a>
-      <a class="action-button" href="<?= DEMO_URL ?>" target="_blank"><?= T('viewDemo') ?></a>
+      <a class="actionButton" href="<?= URL('technology.php') ?>"><?= T('moreAboutTechnology') ?></a>
+      <a class="actionButton" href="<?= DEMO_URL ?>" target="_blank"><?= T('viewDemo') ?></a>
     </div>
   </section>
 
@@ -117,8 +117,8 @@ $solutionSectionItems = [[
   </section>
 
   <section class="preface">
-    <a class="action-button" href="<?= URL('technology.php') ?>">
-      <?= T('bottomIndexTechButton') ?>
+    <a class="actionButton" href="<?= URL('technology.php') ?>">
+      <p><?= T('bottomIndexTechButton') ?></p>
     </a>
   </section>
 </main>
