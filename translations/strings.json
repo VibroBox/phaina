@@ -149,5 +149,9 @@
   "feedback": {
     "en": "Feedback",
     "ru": "Обратная связь"
+  },
+  "goToTableOfContents": {
+    "en": "Table of Contents",
+    "ru": "Содержание"
   }
 }
