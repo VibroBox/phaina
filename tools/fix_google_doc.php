@@ -219,7 +219,7 @@ function GetUglyIDs($domDocument) {
     if (!$el->hasAttribute('id'))
       continue;
     $value = $el->getAttribute('id');
-    if (preg_match('/(h\.|id\.)[\w-]+/', $value)) {
+    if (preg_match('/(h|id|kix)\.[\w-]+/', $value)) {
       $results[$value] = $el->nodeValue;
     }
   }
