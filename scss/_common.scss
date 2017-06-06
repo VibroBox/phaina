@@ -95,6 +95,12 @@ a {
   }
 }
 
+// Should be used by @extend %roundButton;
+%roundButton {
+  border-radius: 0.5em;
+  padding: 0.7em 1em;
+}
+
 @media print {
   .no-print, .no-print * {
     display: none !important;
