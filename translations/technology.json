@@ -20,8 +20,16 @@
     "en":"Updated on %B %e, %Y at %H:%M %Z.",
     "ru":"Обновлено %e %B %Y в %H:%M %Z."
   },
+  "updatedAtWindows":{
+    "en":"Updated on %B %#d, %Y at %H:%M UTC.",
+    "ru":"Обновлено %c UTC."
+  },
   "setlocale":{
     "en":"en_US",
     "ru":"ru_RU"
+  },
+  "setlocaleWindows":{
+    "en":"en",
+    "ru":"ru"
   }
 }

@@ -16,12 +16,18 @@ HTML_HEAD();
 // TODO: Reuse this code.
 function UpdatedAt() {
   $dateFormat = T('updatedAt');
-  // Windows does not support %e.
-  if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN')
-    $dateFormat = str_replace('%e', '%#d', $dateFormat);
+  $locale = T('setlocale');
+  // Windows does not support %e and prints ugly date text for non-English languages.
+  // And it does not understand full locales like `ru_RU`, only short ones (`ru`).
+  if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
+    $dateFormat = T('updatedAtWindows');
+    $locale = T('setlocaleWindows');
+  }
   $oldLocale = setlocale(LC_TIME, '0');
-  if (false === setlocale(LC_TIME, T('setlocale')))
-    die("ERROR: setlocale is not supported.\n");
+  if (false === setlocale(LC_TIME, $locale)) {
+    error_log("ERROR: setlocale is not supported.");
+    exit(-1);
+  }
   $lastmod = filemtime(dirname(__FILE__).'/../content/technology.' . LANG . '.html');
   $updatedAt = strftime($dateFormat, $lastmod);
   setlocale(LC_TIME, $oldLocale);
