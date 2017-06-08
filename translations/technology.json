@@ -17,11 +17,11 @@
     "ru":"Ключевые слова для bing."
   },
   "updatedAt":{
-    "en":"Updated on %B %e, %Y at %H:%M %Z.",
+    "en":"This is the translation of the <a href=\"https://www.vibrobox.ru/technology\">original article</a> in Russian, updated on %B %e, %Y at %H:%M %Z.",
     "ru":"Обновлено %e %B %Y в %H:%M %Z."
   },
   "updatedAtWindows":{
-    "en":"Updated on %B %#d, %Y at %H:%M UTC.",
+    "en":"This is the translation of the <a href=\"https://www.vibrobox.ru/technology\">original article</a> in Russian, updated on %B %#d, %Y at %H:%M UTC.",
     "ru":"Обновлено %c UTC."
   },
   "setlocale":{
