@@ -1,7 +1,7 @@
 // In Russian, readers are used to the "Redline" indent.
 html[lang="ru"] .content p {
   @include largerThanPhablet {
-    text-indent: 2rem;
+    text-indent: 1.5rem;
   }
 }
 
