@@ -112,6 +112,13 @@ function IncludeContent($baseName) {
   echo $html;
 }
 
+function HasContent($baseName){
+  $basePath = dirname(__FILE__).'/../content/' . $baseName;
+  $paths = glob($basePath . '.' . LANG . '*');
+
+  return !empty($paths);
+}
+
 function GetPageTranslationsExcludingCurrentLang() {
   $translations = [];
   foreach(LANG_SITES as $key=>$url) {
