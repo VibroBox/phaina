@@ -112,9 +112,9 @@ function IncludeContent($baseName) {
   echo $html;
 }
 
-function HasContent($baseName){
+function HasContent($baseName, $lang = LANG){
   $basePath = dirname(__FILE__).'/../content/' . $baseName;
-  $paths = glob($basePath . '.' . LANG . '*');
+  $paths = glob($basePath . '.' . $lang . '*');
 
   return !empty($paths);
 }
