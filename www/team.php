@@ -109,7 +109,7 @@ $team = [[
   </section>
   <?php if (HasContent('publications')) : ?>
   <section class="section">
-    <div class="content">
+    <div class="content content__publications">
       <?php IncludeContent('publications') ?>
     </div>
   </section>
