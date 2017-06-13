@@ -107,6 +107,13 @@ $team = [[
       <?php endforeach; ?>
     </div>
   </section>
+  <?php if (HasContent('publications')) : ?>
+  <section class="section">
+    <div class="content">
+      <?php IncludeContent('publications') ?>
+    </div>
+  </section>
+  <?php endif; ?>
 </main>
 <?php HTML_ASIDE(); ?>
 <?php HTML_FOOTER(); ?>
