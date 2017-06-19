@@ -1,13 +1,13 @@
 {
   "metaDescriptionIndexPage": {
     "comment": "Page description displayed by search engines in the results list. Visible part is around 260 chars.",
-    "default": "Fully automatic vibration-based diagnostics, condition monitoring and mechanical breakdown prediction service aimed to save on industrial equipment’s maintenance costs.",
-    "ru": "Алгоритмы анализа вибрации VibroBox автоматически рекомендуют техобслуживание и сообщают, какой именно узел оборудования нуждается в ремонте. Вибродиагностика теперь доступна каждому как онлайн-сервис."
+    "default": "Automatic predictive maintenance, vibration diagnostics and condition monitoring service for Industry 4.0 and IIoT. Our team is focused on wavelets, neural networks, fuzzy logic and other digital signal processing algorithms.",
+    "ru": "Автоматический облачный сервис для обслуживания «по состоянию», предсказания неисправностей и подробных рекомендаций по техобслуживанию. Вейвлеты, ЦОС и нейросети для Индустрии 4.0 (Industry 4.0) и промышленного интернета вещей (IIoT)."
   },
   "metaKeywordsIndexPage": {
     "comment": "These keywords are used by Yandex in some cases.",
-    "default": "VibroBox, Estimation, condition, monitoring, equipment, vibro, diagnostics, vibrodiagnostics, vibration, prediction",
-    "ru": "Вибробокс, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика, техническое обслуживание"
+    "default": "VibroBox, Estimation, condition, monitoring, equipment, vibro, diagnostics, vibrodiagnostics, vibration, prediction, maintenance, neural networks, wavelets, fuzzy logic",
+    "ru": "VibroBox, Вибробокс, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика, техническое обслуживание, ЦОС, DSP, нейронные сети, neural networks, вейвлеты, wavelets, нечёткая логика, fuzzy logic"
   },
   "Menu": {
     "en": "Menu",
