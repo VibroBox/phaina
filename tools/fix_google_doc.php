@@ -16,6 +16,8 @@ if (count($argv) < 3) {
   exit(1);
 }
 
+const UGLY_ID_PATTERN = '/(h|id|kix)\.[\w-]+/';
+
 $html = file_get_contents($argv[1]);
 if ($html === false)
   die("ERROR: Can't open file $argv[1].");
@@ -25,14 +27,15 @@ $count = ReplaceInvalidNbsp($html);
 if ($count)
   echo "* Replaced $count incorrect &nbsp; randomly inserted by Google Docs after <span> tags.\n\n";
 
+$doc = CreateDOMDocument($html);
+MoveIdsFromEmptyATags($doc);
+$html = $doc->saveHTML();
+
 // Html exported from GDocs can be malformed. Fix it before processing with DOMDocument.
 echo "* Launching tidy-html5 to fix non-closed <p> tags...\n";
 RunTidy("-utf8 -q --preserve-entities yes --logical-emphasis yes --anchor-as-name no -w 0 -gdoc", $html);
 
-$doc = new DOMDocument();
-$doc->preserveWhiteSpace = false;
-$doc->loadHTML($html);
-
+$doc = CreateDOMDocument($html);
 $count = FixImages($doc);
 if ($count)
   echo "* Fixed $count images.\n\n";
@@ -219,7 +222,7 @@ function GetUglyIDs($domDocument) {
     if (!$el->hasAttribute('id'))
       continue;
     $value = $el->getAttribute('id');
-    if (preg_match('/(h|id|kix)\.[\w-]+/', $value)) {
+    if (preg_match(UGLY_ID_PATTERN, $value)) {
       $results[$value] = $el->nodeValue;
     }
   }
@@ -269,4 +272,31 @@ function RunCmdStdinStdout($cmd, &$text) {
   $text = stream_get_contents($pipes[1]);
   fclose($pipes[1]);
   return proc_close($process);
+}
+
+// Handle situation when empty <a> tag was inserted before tag with content.
+function MoveIdsFromEmptyATags(&$domDocument) {
+  foreach ($domDocument->getElementsByTagName('a') as $a) {
+    if (!$a->hasAttribute('id') || !empty($a->textContent))
+      continue;
+
+    $id = $a->getAttribute('id');
+    if (preg_match(UGLY_ID_PATTERN, $id)) {
+      $s = $a->nextSibling;
+
+      // Content tag should not have id and should have content.
+      if (!$s->hasAttribute('id') && !empty($s->textContent)) {
+        $s->setAttribute('id', $id);
+        $a->removeAttribute("id");
+      }
+    }
+  }
+}
+
+function CreateDOMDocument($html) {
+  $doc = new DOMDocument();
+  $doc->preserveWhiteSpace = false;
+  $doc->loadHTML($html);
+
+  return $doc;
 }
