@@ -16,8 +16,6 @@ if (count($argv) < 3) {
   exit(1);
 }
 
-const UGLY_ID_PATTERN = '/(h|id|kix)\.[\w-]+/';
-
 $html = file_get_contents($argv[1]);
 if ($html === false)
   die("ERROR: Can't open file $argv[1].");
@@ -222,7 +220,7 @@ function GetUglyIDs($domDocument) {
     if (!$el->hasAttribute('id'))
       continue;
     $value = $el->getAttribute('id');
-    if (preg_match(UGLY_ID_PATTERN, $value)) {
+    if (preg_match('/(h|id|kix)\.[\w-]+/', $value)) {
       $results[$value] = $el->nodeValue;
     }
   }
@@ -274,26 +272,36 @@ function RunCmdStdinStdout($cmd, &$text) {
   return proc_close($process);
 }
 
-// Handle situation when empty <a> tag was inserted before tag with content.
-function MoveIdsFromEmptyATags(&$domDocument) {
-  foreach ($domDocument->getElementsByTagName('a') as $a) {
+// Move id attribute from stand-alone <a> tag to the following sibling <p> tag.
+// It is necessary because tidy drops <a> tags without content which are used as bookmarks in Google Docs.
+function MoveIdsFromEmptyATags(&$doc) {
+  foreach ($doc->getElementsByTagName('a') as $a) {
     if (!$a->hasAttribute('id') || !empty($a->textContent))
       continue;
 
-    $id = $a->getAttribute('id');
-    if (preg_match(UGLY_ID_PATTERN, $id)) {
-      $s = $a->nextSibling;
+    $s = $a->nextSibling;
+    while(isset($s)) {
+      if ($s->hasAttribute('id')) {
+          echo "WARNING: Empty <a> tag's sibling has id.\n";
+          echo "WARNING: ".$doc->saveHtml($s)."\n";
+          echo "WARNING: -------------------------------------\n";
+          break;
+      }
 
       // Content tag should not have id and should have content.
-      if (!$s->hasAttribute('id') && !empty($s->textContent)) {
-        $s->setAttribute('id', $id);
+      if (!empty($s->textContent)) {
+        $s->setAttribute('id', $a->getAttribute('id'));
         $a->removeAttribute("id");
+        break;
+      } else {
+        $s = $s->nextSibling;
       }
     }
   }
 }
 
 function CreateDOMDocument($html) {
+  libxml_use_internal_errors(true);
   $doc = new DOMDocument();
   $doc->preserveWhiteSpace = false;
   $doc->loadHTML($html);
