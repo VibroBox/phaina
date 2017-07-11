@@ -281,11 +281,20 @@ function MoveIdsFromEmptyATags(&$doc) {
 
     $s = $a->nextSibling;
     while(isset($s)) {
+      // Skip empty nodes (whitespace, newline).
+      if(isNodeEmpty($s)) {
+        echo "WARNING: Skip empty node.\n";
+        echo "WARNING: ".$doc->saveHtml($s)."\n";
+        echo "WARNING: -------------------------------------\n";
+        $s = $s->nextSibling;
+        continue;
+      }
+
       if ($s->hasAttribute('id')) {
-          echo "WARNING: Empty <a> tag's sibling has id.\n";
-          echo "WARNING: ".$doc->saveHtml($s)."\n";
-          echo "WARNING: -------------------------------------\n";
-          break;
+        echo "WARNING: Empty <a> tag's sibling has id.\n";
+        echo "WARNING: ".$doc->saveHtml($s)."\n";
+        echo "WARNING: -------------------------------------\n";
+        break;
       }
 
       // Content tag should not have id and should have content.
@@ -293,18 +302,21 @@ function MoveIdsFromEmptyATags(&$doc) {
         $s->setAttribute('id', $a->getAttribute('id'));
         $a->removeAttribute("id");
         break;
-      } else {
-        $s = $s->nextSibling;
       }
+
+      $s = $s->nextSibling;
     }
   }
 }
 
 function CreateDOMDocument($html) {
-  libxml_use_internal_errors(true);
   $doc = new DOMDocument();
   $doc->preserveWhiteSpace = false;
   $doc->loadHTML($html);
 
   return $doc;
+}
+
+function isNodeEmpty($node) {
+  return empty(trim($node->nodeValue, " \n\r\t\0\xC2\xA0"));
 }
