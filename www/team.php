@@ -14,10 +14,10 @@ $team = [[
     'title' => 'idavydovTitle',
     'description' => 'idavydovDescription'],
   [
-    'img' => 'img/team/Alexander_Zolotarev.jpg',
-    'name' => 'Alexander Zolotarev',
-    'title' => 'zolotarevTitle',
-    'description' => 'zolotarevDescription'],
+    'img' => 'img/team/Alexander_Borsuk.jpg',
+    'name' => 'Alexander Borsuk',
+    'title' => 'borsukTitle',
+    'description' => 'borsukDescription'],
   [
     'img' => 'img/team/Yury_Aslamov.jpg',
     'name' => 'Yury Aslamov',
