@@ -26,8 +26,8 @@ function RemoveFilesAndSubdirs($dir, $excludeFiles = ['.git', '.gitattributes', 
     return;
   // Simple sanity check.
   $dir = realpath($dir);
-  if ($dir == "/" or substr($dir, -2) == ":\\") {
-    echo "Do you really want to delete " . $dir . "?";
+  if ($dir == '/' or substr($dir, -2) == ':\\') {
+    echo "Do you really want to delete $dir?";
     return;
   }
 
@@ -40,10 +40,10 @@ function RemoveFilesAndSubdirs($dir, $excludeFiles = ['.git', '.gitattributes', 
     $realPath = $fileInfo->getRealPath();
     if ($fileInfo->isDir()) {
       if (rmdir($realPath) === false)
-        echo "Error while rmdir " . $realPath . "\n";
+        echo "Error while rmdir $realPath\n";
     } else {
       if (unlink($realPath) === false)
-        echo "Error while unlink " . $realPath . "\n";
+        echo "Error while unlink $realPath\n";
     }
   }
 }
