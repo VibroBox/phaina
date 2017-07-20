@@ -18,10 +18,10 @@ function IsPhp($fileName) {
   return ($pos === false) ? false : strlen($fileName) - $pos == strlen(kPhpExtension);
 }
 
-// Does not delete $dir itself, only everything (except .git directory) inside. Does not stop execution on errors.
-// .git directory is used in deployment scripts. On Windows it can have read only attributes set on some files. As a result
+// Does not delete $dir itself, only everything (except Git files) inside. Does not stop execution on errors.
+// .git directory is often used in deployment scripts. On Windows it can have read only attributes set on some files. As a result
 // not all files will be deleted and deployment scripts go crazy.
-function RemoveFilesAndSubdirs($dir, $excludeDirs = array(".git")) {
+function RemoveFilesAndSubdirs($dir, $excludeFiles = ['.git', '.gitattributes', '.gitignore', '.gitmodules']) {
   if (file_exists($dir) === false)
     return;
   // Simple sanity check.
@@ -31,10 +31,8 @@ function RemoveFilesAndSubdirs($dir, $excludeDirs = array(".git")) {
     return;
   }
 
-  $filter = function ($file, $key, $iterator) use ($excludeDirs) {
-    if ($iterator->hasChildren() && !in_array($file->getFilename(), $excludeDirs))
-      return true;
-    return $file->isFile();
+  $filter = function ($file, $key, $iterator) use ($excludeFiles) {
+    return !in_array($file->getFilename(), $excludeFiles);
   };
   $innerIterator = new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS);
   $iterator = new RecursiveIteratorIterator(new RecursiveCallbackFilterIterator($innerIterator, $filter), RecursiveIteratorIterator::CHILD_FIRST);
