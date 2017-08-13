@@ -89,10 +89,11 @@ function Generate($inDir, $outDir) {
     }
     if (IsPhp($fileName)) {
       $phpFileWithoutExtension = substr($outPath, 0, -strlen(kPhpExtension));
+
       // Create folders with index.html files to redirect visitors to the same url without a slash.
       if ($fileName != kIndex and $fileName != k404) {
         mkdir($phpFileWithoutExtension, kNewDirPermissions);
-        $pageUrl = URL($fileName);
+        $pageUrl = URL($iter->getSubPathName());
         $redirectHtmlTemplate = <<<RHTML
 <!DOCTYPE html>
 <html>
@@ -111,7 +112,7 @@ RHTML;
       // TODO: Handle errors.
       file_put_contents($outPath, HtmlFromPhp($fileInfo));
       print("+ ".$outPath."\n");
-      $processedPhpFiles[$fileName] = $fileInfo;
+      $processedPhpFiles[$iter->getSubPathName()] = $fileInfo;
     }
     else {
       copy($fileInfo, $outPath);
