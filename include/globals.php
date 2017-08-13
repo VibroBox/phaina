@@ -27,8 +27,10 @@ function BaseURL() {
 // $link can be any absolute link without leading slash or .php page name.
 function URLTo($link, $baseUrl) {
   // Root/home/index page.
-  if (empty($link) or $link == '/' or $link == 'index.php')
+  if (empty($link) or $link == '/')
     return $baseUrl;
+  if (EndsWith($link, 'index.php'))
+    return JoinIRI($baseUrl, substr($link, 0, -strlen('index.php')));
   // Ignore full IRIs.
   if (!IsRelativeIRI($link))
     return $link;
