@@ -8,7 +8,6 @@ if (!array_key_exists('REQUEST_URI', $_SERVER) or empty($_SERVER['REQUEST_URI'])
   $_SERVER['REQUEST_URI'] == '/') return;
 
 function FileByRequestUri() {
-  global $PAGES;
   // urldecode helps to support localized URLs.
   $urlPath = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
   // TODO: Support custom links to pages.
@@ -19,10 +18,11 @@ function FileByRequestUri() {
   else if (!EndsWith($file, '.php'))
     $file .= '.php';
 
+  $path = dirname(__FILE__).'/../www/';
   // TODO: Check if Windows works correctly for subdirectories and paths with `/` slashes.
-  if (file_exists(dirname(__FILE__).'/../www/'.$file))
-    return $file;
-  return '404.php';
+  if (file_exists($path . $file))
+    return $path . $file;
+  return $path . '404.php';
 }
 
 require_once(FileByRequestUri());
