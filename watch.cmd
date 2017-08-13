@@ -18,7 +18,7 @@ SET sassc_style=nested
 SET watch_directory=scss
 
 REM Launch local php web server in background.
-START "" /B %php% -S localhost:8888 -t www || ECHO ERROR while launching %php% web server. && EXIT /B 1
+START "" /B %php% -S localhost:8888 -t www router.php || ECHO ERROR while launching %php% web server. && EXIT /B 1
 
 REM Rebuild scss on the launch once and watch for any scss directory changes indefinitely.
 :loop
