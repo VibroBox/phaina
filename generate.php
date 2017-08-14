@@ -93,7 +93,9 @@ function Generate($inDir, $outDir) {
 
       // Create folders with index.html files to redirect visitors to the same url without a slash.
       if ($fileName != kIndex and $fileName != k404) {
-        mkdir($phpFileWithoutExtension, kNewDirPermissions);
+        // Directory can already be created if it contains other php files.
+        if (!file_exists($phpFileWithoutExtension))
+          mkdir($phpFileWithoutExtension, kNewDirPermissions);
         $pageUrl = URL($iter->getSubPathName());
         $redirectHtmlTemplate = <<<RHTML
 <!DOCTYPE html>
