@@ -74,7 +74,8 @@ function Generate($inDir, $outDir) {
     mkdir($outDir, kNewDirPermissions, true);
 
   print("Generating static html pages from php files:\n");
-  $iter = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($inDir),
+  // FilesystemIterator::UNIX_PATHS is required for correct unix-style backslashes in calls to $iter->getSubPathName().
+  $iter = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($inDir, FilesystemIterator::UNIX_PATHS),
       RecursiveIteratorIterator::SELF_FIRST);
   foreach($iter as $fileName => $fileInfo) {
     $fileName = $iter->getFilename();
@@ -82,7 +83,7 @@ function Generate($inDir, $outDir) {
     if ($fileName[0] === '.')
       continue;
     // Generate html from .php files and simply copy everything else into the $outDir.
-    $outPath = FullPathTo($outDir, $iter->getSubPathName());
+    $outPath = FullPathTo($outDir, $iter->getSubPathName(), '/'); // Always use unix-style paths for consistency.
     if ($fileInfo->isDir()) {
       mkdir($outPath, kNewDirPermissions);
       continue;
