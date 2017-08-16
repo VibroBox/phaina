@@ -123,6 +123,13 @@ function HasContent($baseName, $lang = LANG){
 
 function GetPageTranslationsExcludingCurrentLang() {
   $translations = [];
+  
+  // Disable translation for news pages (temp solution).
+  // TODO: invent better mechanism for diabling translation button.
+  if (strpos(FILE, 'новости') !== false) {
+    return [];
+  }
+
   foreach(LANG_SITES as $key=>$url) {
     if (LANG !== $key) {
       $translations[$key] = ['url' => JoinIRI($url, PageLink()), 'title' => T('language', $key)];

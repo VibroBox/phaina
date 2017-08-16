@@ -5,7 +5,7 @@ require_once('strings.php');
 function FullPathTo($outDir, $objectName, $separator = DIRECTORY_SEPARATOR) {
   if (EndsWith($outDir, $separator)) {
     if (StartsWith($objectName, $separator))
-      return $outDir . $objectName.substr(1);   // 'path/', '/to'
+      return $outDir . substr($objectName, 1);   // 'path/', '/to'
     return $outDir . $objectName;               // 'path/', 'to'
   } else {
     if (StartsWith($objectName, $separator))
