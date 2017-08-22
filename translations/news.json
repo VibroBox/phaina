@@ -1,29 +1,38 @@
 {
   "menuNewsPage": {
+    "en": "News",
     "ru": "Новости"
   },
   "readMore": {
-    "ru": "Читать далее..."
+    "en": "Read More…",
+    "ru": "Читать далее…"
   },
   "titleNewsPage": {
-    "ru": "Новости"
+    "en": "VibroBox News",
+    "ru": "Новости VibroBox"
   },
   "metaDescriptionNewsPage": {
-    "ru": "Главные новости проекта VibroBox."
+    "en": "Important project news and events.",
+    "ru": "Главные новости и события проекта."
   },
   "metaKeywordsNewsPage": {
-    "ru": "Новости, VibroBox, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика, IIoT"
+    "en": "News, VibroBox, events, blog, condition, monitoring, equipment, vibration, diagnostics, IIoT, Industry 4.0, predictive, maintenance",
+    "ru": "Новости, VibroBox, события, блог, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика, IIoT, Индустрия 4.0"
   },
   "titleNewsGeelyPage": {
+    "en": "VibroBox vibration diagnostics service was successfully tested at “Geely” automobile factory in Belarus",
     "ru": "Испытания «VibroBox» на совместном белорусско-китайском предприятии по производству автомобилей Geely — СЗАО «БЕЛДЖИ»"
   },
   "metaDescriptionNewsGeelyPage": {
+    "en": "CITIC Construction experts evaluated the results of diagnostics as highly informative and noticed that the system worked consistently.",
     "ru": "Результаты проводимой сервисом VibroBox диагностики специалисты CITIC Construction оценили как высоко информативные, отметив стабильность работы системы."
   },
   "metaKeywordsNewsGeelyPage": {
-    "ru": "VibroBox, Вибробокс, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика"
+    "en": "Geely, Belgee, factory, auto, automobiles, Zhodino, Belarus, VibroBox, predictive, maintenance, report, test, vibration, diagnostics",
+    "ru": "Geely, Belgee, Белджи, завод, автомобили, Жодино, Беларусь, VibroBox, Вибробокс, оценка состояния, мониторинг, оборудование, вибрация, вибродиагностика, диагностика"
   },
   "descriptionForNewsGeelyPage": {
+    "en": "“Industry 4.0” is a European version of Industrial Internet of Things (IIoT) concept. This term is being frequently used by the industry leaders now.",
     "ru": "Термин «Индустрия 4.0» («Industry 4.0»), описывающий европейскую инициативу массового внедрения концепции интернета вещей (IoT) в производственные процессы и системы управления предприятиями прочно вошёл в лексикон передовых промышленных гигантов."
   }
 }

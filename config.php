@@ -25,25 +25,13 @@ require_once('include/globals.php');
 require_once('include/strings.php');
 require_once('include/file_system.php');
 
-// TODO: Support direct html links in the menu.
-// Can not mixin properties into defined constants, so create constant for each language (temp solution).
-if (LANG === 'ru') {
-  define('MENU', [
-    'index.php' => 'menuIndexPage',
-    'technology.php' => 'menuTechnologyPage',
-    'team.php' => 'menuTeamPage',
-    'faq.php' => 'menuFaqPage',
-    'contact.php' => 'menuContactPage',
-    '/новости/index.php' => 'menuNewsPage'
-  ]);
-} elseif (LANG === 'en') {
-  define('MENU', [
-    'index.php' => 'menuIndexPage',
-    'technology.php' => 'menuTechnologyPage',
-    'team.php' => 'menuTeamPage',
-    'faq.php' => 'menuFaqPage',
-    'contact.php' => 'menuContactPage',
-  ]);
-}
+define('MENU', [
+  'index.php' => 'menuIndexPage',
+  'technology.php' => 'menuTechnologyPage',
+  'team.php' => 'menuTeamPage',
+  'faq.php' => 'menuFaqPage',
+  'contact.php' => 'menuContactPage',
+  'news.php' => 'menuNewsPage',
+]);
 
 ?>

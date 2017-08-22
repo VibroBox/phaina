@@ -1,12 +1,11 @@
 <?php
-require_once(dirname(__FILE__).'/../../config.php');
+require_once(dirname(__FILE__).'/../config.php');
 
 // Page properties.
 define('TITLE', 'titleNewsPage');
 define('DESCRIPTION', 'metaDescriptionNewsPage');
 define('KEYWORDS', 'metaKeywordsNewsPage');
 define('FILE', __FILE__);
-define('FILE_ID', '/новости/index.php');
 define('META', [
   ['property' => 'og:image', 'content' => URL('img/meta/VibroBox_and_vibration_sensor.jpg')],
   ['property' => 'og:image:width', 'content' => '1200'],
