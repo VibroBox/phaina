@@ -48,6 +48,9 @@ function ReplacePattern($regexPatternWithOneGroup, &$subject, $mapFn, $filterFn 
 
   if (is_callable($filterFn))
     $values = array_filter($values, $filterFn);
+  // All values were filtered out. There is no need to continue.
+  if (empty($values))
+    return 0;
 
   $mapped = array_map($mapFn, $values);
 
