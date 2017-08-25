@@ -3,6 +3,8 @@ require_once(dirname(__FILE__).'/../config.php');
 // Page properties.
 define('TITLE', 'titleTechnologyPage');
 define('FILE', __FILE__);
+define('DESCRIPTION', 'metaDescriptionTechnologyPage');
+define('KEYWORDS', 'metaKeywordsTechnologyPage');
 define('META', [
   ['property' => 'og:image', 'content' => URL(
     T(['en' => 'img/meta/VibroBox_and_vibration_sensor.jpg', 'ru'=>'img/meta/Algorithms_Scheme.jpg']))],
