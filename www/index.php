@@ -81,7 +81,7 @@ $solutionSectionItems = [[
   <section class="banner">
     <div class="section">
       <h1 class="title-index__main"><?= T('indexMainTitle') ?></h1>
-      <p class="preface"><?= T('indexPreface') ?></p>
+      <div class="preface preface--home"><?= T('indexPreface') ?></div>
       <a class="actionButton" href="<?= URL('technology.php') ?>"><?= T('moreAboutTechnology') ?></a>
       <a class="actionButton" href="<?= DEMO_URL ?>" target="_blank"><?= T('viewDemo') ?></a>
     </div>

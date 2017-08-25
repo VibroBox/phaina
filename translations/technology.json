@@ -9,12 +9,12 @@
   },
   "metaDescriptionTechnologyPage":{
     "comment":"260 or less characters for the defailed Google Search result description.",
-    "default":"The detailed and in-depth description of VibroBox vibration diagnostics. How does our technology predict machinery malfunction and provide detailed recommendations? How do VibroBox algorithms know what are exact defects and which part of the mechanism has it?",
-    "ru":"Подробное описание технологии вибрационной диагностики VibroBox. Как мы упреждаем поломки промышленного оборудования? Откуда берутся детальные рекомендации по техническому обслуживанию? Как наши алгоритмы точно определяют тип дефекта и указывают, где он?"
+    "default":"The detailed and in-depth description of our vibration diagnostics technology. Which algorithms are used for digital signal processing? How wavelets and kinematic scheme are used to extract exact defects from vibration? How to apply machine learning?",
+    "ru":"Детальное описание нашей технологии вибрационной диагностики. Как обрабатывается сигнал, для чего нужна кинематическая схема оборудования, как алгоритмы точно определяют тип и уровень дефекта, откуда берутся детальные рекомендации по техническому обслуживанию?"
   },
   "metaKeywordsTechnologyPage":{
-    "en":"Tech page keywords for bing.",
-    "ru":"Ключевые слова для bing."
+    "en":"Vibration, sensors, telemetry, neural networks, machine learning, wavelets, fuzzy logic, algorithms, predictive, proactive, prescriptive, maintenance, IIoT, Industry, Industrie, 4.0, science, technology, software, hardware",
+    "ru":"Вибрация, сенсоры, датчики, телеметрия, нейронные сети, машинное обучение, вейвлеты, нечёткая логика, алгоритмы, обслуживание, по состоянию, IIoT, индустриальный, интернет вещей, индустрия, 4.0, наука, технология, оборудование"
   },
   "updatedAt":{
     "en":"This is the translation of the <a href=\"https://www.vibrobox.ru/technology\">original article</a> in Russian, updated on %B %e, %Y at %H:%M %Z.",
