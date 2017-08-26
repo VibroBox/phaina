@@ -62,7 +62,7 @@ function BuildSiteMapXml($phpFiles) {
     $siteMap = "$siteMap\n<url>\n  <loc>$url</loc>\n  <lastmod>$lastmod</lastmod>\n</url>";
   }
 
-  return "$siteMap\n</urlset>";
+  return "$siteMap\n</urlset>\n";
 }
 
 function Generate($inDir, $outDir) {
