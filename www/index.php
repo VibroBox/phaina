@@ -27,6 +27,16 @@ define('META', [
 HTML_HEAD();
 
 // Initialization of page data models.
+const NEWS_DATE_FORMAT = ['default' => 'F j, Y', 'ru' => 'j.n.Y'];
+$newsItems = [[
+  'date' => '2017-08-11T13:11:21+00:00',
+  'link' => T(['default' => 'news/automatic-vibration-diagnostics-was-tested-at-geely-automobile-factory-in-belarus',
+  'ru'=> 'новости/испытания-вибродиагностики-vibrobox-на-предприятии-по-производству-автомобилей-geely-в-беларуси']),
+  'title' => T(['default' => 'VibroBox vibration diagnostics service was successfully tested at "Geely" automobile factory in Belarus →',
+  'ru' => 'Испытания «VibroBox» на совместном белорусско-китайском предприятии по производству автомобилей Geely — СЗАО «БЕЛДЖИ» →'
+  ])]
+];
+
 $plusSectionItems = [[
     'title' => T('plusAutomaticSystemTitle'),
     'description' => T('plusAutomaticSystemDescription'),
@@ -85,6 +95,16 @@ $solutionSectionItems = [[
       <a class="actionButton" href="<?= URL('technology.php') ?>"><?= T('moreAboutTechnology') ?></a>
       <a class="actionButton" href="<?= DEMO_URL ?>" target="_blank"><?= T('viewDemo') ?></a>
     </div>
+  </section>
+
+  <section class="section news__section">
+    <ul>
+      <?php foreach ($newsItems as $news) : ?><li>
+        <time class="newsDate" datetime="<?= $news['date'] ?>" itemprop="datePublished"><?= (new DateTime($news['date']))->format(T(NEWS_DATE_FORMAT)) ?></time>
+        <a href="<?= URL($news['link']) ?>"><?= $news['title'] ?></a>
+      </li><?php endforeach; ?>
+
+    </ul>
   </section>
 
   <section class="section system separator">
