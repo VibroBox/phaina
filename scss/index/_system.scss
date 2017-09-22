@@ -100,6 +100,22 @@
   }
 }
 
+html[lang=ru] .system-container {
+  &__equipment {
+    bottom: 10.5%;
+  }
+
+  &__u-report {
+    bottom: 10.5%;
+  }
+
+  &__g-report {
+    &:after {
+      top: 100%;
+    }
+  }
+}
+
 @media (max-width: 1199px) {
   .system-container {
     background-position: 20% 45%;
