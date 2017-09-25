@@ -225,6 +225,26 @@ html[lang=ru] .system-container {
       }
     }
   }
+
+  html[lang=ru] .system-container {
+    &__item {
+      min-height: 310px;
+    }
+
+    &__equipment {
+      bottom: 15.5%;
+    }
+
+    &__u-report {
+      bottom: 15.5%;
+    }
+
+    &__g-report {
+      &:after {
+        top: 35%;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -322,6 +342,22 @@ html[lang=ru] .system-container {
 
     &__u-report {
       max-width: none;
+    }
+  }
+
+  html[lang=ru] .system-container {
+    &__equipment {
+      bottom: 15.5%;
+    }
+
+    &__u-report {
+      bottom: 15.5%;
+    }
+
+    &__g-report {
+      &:after {
+        top:auto;
+      }
     }
   }
 }
