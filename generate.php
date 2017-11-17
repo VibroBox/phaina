@@ -52,6 +52,8 @@ function RemoveFilesAndSubdirs($dir, $excludeFiles = ['.git', '.gitattributes', 
 function BuildSiteMapXml($phpFiles) {
   $siteMap = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
+  // File order in the output xml should be stable for easier merge.
+  ksort($phpFiles);
   foreach ($phpFiles as $file => $fullPath) {
     // Ignore special 404.php page.
     if (EndsWith($file, k404))
