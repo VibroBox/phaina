@@ -37,7 +37,7 @@ fi
 # Kill all background processes in the current process group on exit (ctrl+C).
 trap 'kill 0' EXIT
 
-"$PHP_BINARY" -S localhost:8888 -t www router.php &
+"$PHP_BINARY" -S localhost:8888 -t www ../router.php &
 
 # Small helper.
 rebuildCSS() {
