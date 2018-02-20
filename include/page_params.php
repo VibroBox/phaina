@@ -2,7 +2,12 @@
 function PageFile() {
   if (!defined('FILE'))
     die("Please add `define('FILE', __FILE__);` in your rendered page.\n");
+  
   // TODO: Add support for php files in subdirectories.
+  // Did not invent better solution how to identify that news page (php files in subdirectories) should be highlighted in main menu.
+  if (defined('FILE_ID'))
+    return FILE_ID;
+
   return basename(FILE);
 }
 
